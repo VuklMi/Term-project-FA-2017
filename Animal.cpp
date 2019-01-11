@@ -1,4 +1,4 @@
-// Lab 16, An Improved Artificial Intelligence Program
+// An Improved Artificial Intelligence Program
 // Programmer: Michaela Vuklisevicova 
 // Text Editor used: Notepad++ 
 // Compiler used: Visual Studio 2015
@@ -15,7 +15,7 @@ struct animal
   animal *no;  // // pointer to next node if question is answered NO
 }; // if "yes" and "no" are 0, then "text" is an animal name
 
-// function prototype
+// function prototypes
 void deallocateTree(animal*);
 void saveTree(ofstream &, animal *);
 animal *loadTree(ifstream &);
@@ -24,7 +24,7 @@ int main()
 {
   // print name assignment's title
   cout << endl;  
-  cout << "Lab 16, An Improved Artificial Intelligence Program" << endl; 
+  cout << "An Improved Artificial Intelligence Program" << endl; 
   cout << "Programmer: Michaela Vuklisevicova" << endl; 
   cout << "Text Editor used: Notepad++" << endl; 
   cout << "Compiler used: Visual Studio 2015" << endl; 
@@ -37,7 +37,7 @@ int main()
   
   animal *root = 0; // root pointer set to 0
   
-  if(fin.good()) //if the file opened succesfully, load the tree
+  if(fin) //if the file opened succesfully, load the tree
   {
 	root = loadTree(fin); // use loadTree function to obtain all the info from the file and create the existing tree
     fin.close(); // close the text file
